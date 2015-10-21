@@ -18,7 +18,7 @@ public class EditObjectInstancePage extends BasePage {
     private static final By EDIT_BUTTON = By.xpath("//button[contains(text(),'Edit')]");
     private static final By DELETE_BUTTON = By.cssSelector(".btn.btn-danger.btn-xs.btn-delete");
     private static final By TITLE = By.tagName("h2");
-    private static final By MESSAGE_AFTER_ACTION = By.id("#w0");
+    private static final By MESSAGE_AFTER_ACTION = By.id("w0");
 
 
     public enum ErrorMessageEditObjPage{

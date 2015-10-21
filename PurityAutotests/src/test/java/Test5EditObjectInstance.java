@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.*;
  */
 public class Test5EditObjectInstance extends BaseTest {
 
-    @Test
+
     public void createObject(){
         LoginPage.authorizeAsAdmin();
         MainPage.goToEditObjectInstancePage(/*name*/"AUTOTEST1632");
