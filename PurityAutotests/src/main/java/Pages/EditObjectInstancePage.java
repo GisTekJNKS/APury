@@ -28,7 +28,7 @@ public class EditObjectInstancePage extends BasePage {
     }
 
     public static void clickButtonEditObject(){
-        $(EDIT_OBJECT_BUTTON).click();
+        $(EDIT_OBJECT_BUTTON).waitUntil(visible,5000).click();
     }
 
     public static void clickButtonEdit(){
