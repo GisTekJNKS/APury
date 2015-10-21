@@ -20,7 +20,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class Test3CreateObject extends BaseTest {
 
 
-    @Test
+
     public void createObject() throws InterruptedException {
         LoginPage.authorizeAsAdmin();
         MainPage.goToObjectEditor();
