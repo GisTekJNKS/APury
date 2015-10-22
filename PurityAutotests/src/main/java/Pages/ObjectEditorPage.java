@@ -87,7 +87,7 @@ public class ObjectEditorPage extends BasePage{
     }
 
     public static void inputFieldName(String fieldName) {
-        $(FIELD_NAME).click();
+        $(FIELD_NAME).waitUntil(visible,5000).click();
         $(FIELD_NAME).sendKeys(fieldName);
         $("#pjax-widget").click();
         if($(By.xpath("//div[text()='Name cannot be blank.']")).isDisplayed()){
