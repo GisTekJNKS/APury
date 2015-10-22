@@ -11,13 +11,15 @@ import org.testng.Assert;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.actions;
+import static com.codeborne.selenide.Selenide.getFocusedElement;
 import static org.testng.Assert.*;
 
 /**
  * Created by Dmitry Makhankov on 17.10.2015.
  */
 public class ObjectEditorPage extends BasePage{
-
+    private static int temp=0;
     private static final By TITLE = By.tagName("h2");
     private static final By CREATE_NEW_BUTTON = By.cssSelector(".btn.btn-primary.add-role-btn");
     private static final By NAME = By.id("objectslistform-entity_name");
@@ -58,7 +60,7 @@ public class ObjectEditorPage extends BasePage{
     }
 
     public static void checkTitleisDisplayed(){
-        $(TITLE).waitUntil(visible,6000).shouldHave(text("List of Object types"));
+        $(TITLE).waitUntil(visible, 6000).shouldHave(text("List of Object types"));
     }
 
     public static void clickButtonCreateNew (){
@@ -81,17 +83,16 @@ public class ObjectEditorPage extends BasePage{
         {
             clickButtonAddObjectFields();
         }
-        $(FIELD_NAME).waitUntil(visible,40000);
+        $(FIELD_NAME).waitUntil(visible,5000);
     }
 
-    public static void inputFieldName(String fieldName){
+    public static void inputFieldName(String fieldName) {
         $(FIELD_NAME).click();
         $(FIELD_NAME).sendKeys(fieldName);
         $("#pjax-widget").click();
         if($(By.xpath("//div[text()='Name cannot be blank.']")).isDisplayed()){
             inputFieldName(fieldName);
         }
-
     }
 
 
@@ -131,8 +132,10 @@ public class ObjectEditorPage extends BasePage{
 
     public static void clickButtonCreate(){
         $(CREATE_BUTTON).click();
-        Waiter.waitForJquery(10000);
-        assertTrue($("#w0").waitUntil(visible, 10000).getText().startsWith("Well done! You successfully created entity"));
+        if ($(By.xpath("//h2[contains(text(),'Create entity')]")).exists()) {
+            clickButtonCreate();
+        }
+        assertTrue($("#w0").waitUntil(visible, 20000).getText().contains("Well done! You successfully created entity"));
     }
 
     public static void clickButtonDelete(){
