@@ -58,8 +58,8 @@ public class EditObjectInstancePage extends BasePage {
     }
 
 
-    public static void checkTitleIsDisplayed(){
-        assertTrue($(TITLE).waitUntil(visible, 10000).getText().startsWith("Edit"));
+    public static void checkTitleIsDisplayed(String name){
+        assertTrue($(TITLE).waitUntil(visible, 10000).getText().contains("List of objects (\""+name+"\" type)"));
     }
 
 }

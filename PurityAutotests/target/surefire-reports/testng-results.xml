@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" total="8" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="137779" started-at="2015-10-23T06:36:01Z" finished-at="2015-10-23T06:38:19Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="137779" started-at="2015-10-23T06:36:01Z" finished-at="2015-10-23T06:38:19Z">
+      <class name="Test1SuccessfulAuthorization">
+        <test-method status="PASS" signature="PrepareTestData()[pri:0, instance:Test1SuccessfulAuthorization@7b4acdc2]" name="PrepareTestData" is-config="true" duration-ms="26" started-at="2015-10-23T09:36:01Z" finished-at="2015-10-23T09:36:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PrepareTestData -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:Test1SuccessfulAuthorization@7b4acdc2]" name="setup" is-config="true" duration-ms="6824" started-at="2015-10-23T09:36:01Z" finished-at="2015-10-23T09:36:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="authorize()[pri:0, instance:Test1SuccessfulAuthorization@7b4acdc2]" name="authorize" duration-ms="2811" started-at="2015-10-23T09:36:08Z" finished-at="2015-10-23T09:36:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authorize -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test1SuccessfulAuthorization@7b4acdc2]" name="tearDown" is-config="true" duration-ms="904" started-at="2015-10-23T09:36:11Z" finished-at="2015-10-23T09:36:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test1SuccessfulAuthorization -->
+      <class name="Test7DeleteObject">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Test7DeleteObject@280d9edc]" name="setup" is-config="true" duration-ms="4928" started-at="2015-10-23T09:37:05Z" finished-at="2015-10-23T09:37:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="createObject()[pri:0, instance:Test7DeleteObject@280d9edc]" name="createObject" duration-ms="6546" started-at="2015-10-23T09:37:10Z" finished-at="2015-10-23T09:37:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createObject -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test7DeleteObject@280d9edc]" name="tearDown" is-config="true" duration-ms="357" started-at="2015-10-23T09:37:16Z" finished-at="2015-10-23T09:37:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test7DeleteObject -->
+      <class name="Test4CreateObjectInstance">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Test4CreateObjectInstance@70331432]" name="setup" is-config="true" duration-ms="34658" started-at="2015-10-23T09:37:40Z" finished-at="2015-10-23T09:38:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="createObject()[pri:0, instance:Test4CreateObjectInstance@70331432]" name="createObject" duration-ms="3754" started-at="2015-10-23T09:38:14Z" finished-at="2015-10-23T09:38:18Z">
+          <exception class="com.codeborne.selenide.ex.ElementNotFound">
+            <message>
+              <![CDATA[Element not found {By.id: show-login-form-btn}
+Expected: visible]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Element not found {By.id: show-login-form-btn}
+Expected: visible
+Screenshot: file:/D:/AUTOTESTS/WorkDirectory/AutoPury/PurityAutotests/build/reports/tests/1445582297886.1.png
+Timeout: 3 s.
+Caused by: NoSuchElementException: Unable to locate element: {"method":"id","selector":"show-login-form-btn"}
+	at com.codeborne.selenide.impl.AbstractSelenideElement.createElementNotFoundError(AbstractSelenideElement.java:703)
+	at com.codeborne.selenide.impl.WaitingSelenideElement.createElementNotFoundError(WaitingSelenideElement.java:82)
+	at com.codeborne.selenide.impl.AbstractSelenideElement.checkCondition(AbstractSelenideElement.java:546)
+	at com.codeborne.selenide.impl.AbstractSelenideElement.findAndAssertElementIsVisible(AbstractSelenideElement.java:410)
+	at com.codeborne.selenide.impl.AbstractSelenideElement.click(AbstractSelenideElement.java:398)
+	at com.codeborne.selenide.impl.AbstractSelenideElement.dispatchSelenideMethod(AbstractSelenideElement.java:267)
+	at com.codeborne.selenide.impl.AbstractSelenideElement.dispatchAndRetry(AbstractSelenideElement.java:90)
+	at com.codeborne.selenide.impl.AbstractSelenideElement.invoke(AbstractSelenideElement.java:65)
+	at com.codeborne.selenide.impl.WaitingSelenideElement.invoke(WaitingSelenideElement.java:19)
+	at com.sun.proxy.$Proxy6.click(Unknown Source)
+	at Pages.LoginPage.showLoginForm(LoginPage.java:32)
+	at Pages.LoginPage.authorizeAsAdmin(LoginPage.java:64)
+	at Test4CreateObjectInstance.createObject(Test4CreateObjectInstance.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:205)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"show-login-form-btn"}
+Command duration or timeout: 52 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'Anders', ip: '172.22.45.113', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=41.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 72b4ea9d-6678-438d-905f-205b80321aed
+*** Element info: {Using=id, value=show-login-form-btn}
+	at sun.reflect.GeneratedConstructorAccessor12.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:403)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:28)
+	at com.codeborne.selenide.impl.WaitingSelenideElement.getActualDelegate(WaitingSelenideElement.java:56)
+	at com.codeborne.selenide.impl.AbstractSelenideElement.checkCondition(AbstractSelenideElement.java:528)
+	... 38 more
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"show-login-form-btn"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'Anders', ip: '172.22.45.113', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/John/AppData/Local/Temp/anonymous867087694109639559webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
+	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/John/AppData/Local/Temp/anonymous867087694109639559webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10668)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/John/AppData/Local/Temp/anonymous867087694109639559webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/John/AppData/Local/Temp/anonymous867087694109639559webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12539)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/John/AppData/Local/Temp/anonymous867087694109639559webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12481)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.codeborne.selenide.ex.ElementNotFound -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createObject -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test4CreateObjectInstance@70331432]" name="tearDown" is-config="true" duration-ms="348" started-at="2015-10-23T09:38:19Z" finished-at="2015-10-23T09:38:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test4CreateObjectInstance -->
+      <class name="Test3CreateObject">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Test3CreateObject@743c6ce4]" name="setup" is-config="true" duration-ms="4447" started-at="2015-10-23T09:37:16Z" finished-at="2015-10-23T09:37:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="createObject()[pri:0, instance:Test3CreateObject@743c6ce4]" name="createObject" duration-ms="17758" started-at="2015-10-23T09:37:21Z" finished-at="2015-10-23T09:37:39Z">
+          <exception class="com.codeborne.selenide.ex.ElementShould">
+            <message>
+              <![CDATA[Element should be visible {By.id: fieldsform-caption}
+Element: '<input class="form-control" id="fieldsform-caption" name="FieldsForm[caption]" placeholder="New Field" type="text" value="Boolean" displayed:false></input>']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Element should be visible {By.id: fieldsform-caption}
+Element: '<input class="form-control" id="fieldsform-caption" name="FieldsForm[caption]" placeholder="New Field" type="text" value="Boolean" displayed:false></input>'
+Screenshot: file:/D:/AUTOTESTS/WorkDirectory/AutoPury/PurityAutotests/build/reports/tests/1445582259012.0.png
+Timeout: 5 s.
+	at com.codeborne.selenide.impl.AbstractSelenideElement.checkCondition(AbstractSelenideElement.java:553)
+	at com.codeborne.selenide.impl.AbstractSelenideElement.should(AbstractSelenideElement.java:517)
+	at com.codeborne.selenide.impl.AbstractSelenideElement.invokeShould(AbstractSelenideElement.java:305)
+	at com.codeborne.selenide.impl.AbstractSelenideElement.dispatchSelenideMethod(AbstractSelenideElement.java:179)
+	at com.codeborne.selenide.impl.AbstractSelenideElement.dispatchAndRetry(AbstractSelenideElement.java:90)
+	at com.codeborne.selenide.impl.AbstractSelenideElement.invoke(AbstractSelenideElement.java:65)
+	at com.codeborne.selenide.impl.WaitingSelenideElement.invoke(WaitingSelenideElement.java:19)
+	at com.sun.proxy.$Proxy6.waitUntil(Unknown Source)
+	at Pages.ObjectEditorPage.clickButtonAddObjectFields(ObjectEditorPage.java:86)
+	at Test3CreateObject.createObject(Test3CreateObject.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:205)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.codeborne.selenide.ex.ElementShould -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createObject -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test3CreateObject@743c6ce4]" name="tearDown" is-config="true" duration-ms="597" started-at="2015-10-23T09:37:39Z" finished-at="2015-10-23T09:37:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test3CreateObject -->
+      <class name="Test2FailAuthorization">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Test2FailAuthorization@6a282fdd]" name="setup" is-config="true" duration-ms="20098" started-at="2015-10-23T09:36:29Z" finished-at="2015-10-23T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="authorizeWithEmptyFields()[pri:0, instance:Test2FailAuthorization@6a282fdd]" name="authorizeWithEmptyFields" duration-ms="1872" started-at="2015-10-23T09:36:50Z" finished-at="2015-10-23T09:36:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authorizeWithEmptyFields -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test2FailAuthorization@6a282fdd]" name="tearDown" is-config="true" duration-ms="303" started-at="2015-10-23T09:36:51Z" finished-at="2015-10-23T09:36:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:Test2FailAuthorization@6a282fdd]" name="setup" is-config="true" duration-ms="5175" started-at="2015-10-23T09:36:52Z" finished-at="2015-10-23T09:36:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="authorizeWithIncorrectEmail()[pri:0, instance:Test2FailAuthorization@6a282fdd]" name="authorizeWithIncorrectEmail" duration-ms="857" started-at="2015-10-23T09:36:57Z" finished-at="2015-10-23T09:36:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authorizeWithIncorrectEmail -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test2FailAuthorization@6a282fdd]" name="tearDown" is-config="true" duration-ms="374" started-at="2015-10-23T09:36:58Z" finished-at="2015-10-23T09:36:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:Test2FailAuthorization@6a282fdd]" name="setup" is-config="true" duration-ms="4804" started-at="2015-10-23T09:36:58Z" finished-at="2015-10-23T09:37:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="authorizeWithIncorrectPassword()[pri:0, instance:Test2FailAuthorization@6a282fdd]" name="authorizeWithIncorrectPassword" duration-ms="1150" started-at="2015-10-23T09:37:03Z" finished-at="2015-10-23T09:37:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authorizeWithIncorrectPassword -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test2FailAuthorization@6a282fdd]" name="tearDown" is-config="true" duration-ms="545" started-at="2015-10-23T09:37:04Z" finished-at="2015-10-23T09:37:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test2FailAuthorization -->
+      <class name="Test6EditObjectInsertWrongData">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Test6EditObjectInsertWrongData@10c2064a]" name="setup" is-config="true" duration-ms="5576" started-at="2015-10-23T09:36:12Z" finished-at="2015-10-23T09:36:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="createObject()[pri:0, instance:Test6EditObjectInsertWrongData@10c2064a]" name="createObject" duration-ms="11335" started-at="2015-10-23T09:36:17Z" finished-at="2015-10-23T09:36:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createObject -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test6EditObjectInsertWrongData@10c2064a]" name="tearDown" is-config="true" duration-ms="742" started-at="2015-10-23T09:36:29Z" finished-at="2015-10-23T09:36:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test6EditObjectInsertWrongData -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

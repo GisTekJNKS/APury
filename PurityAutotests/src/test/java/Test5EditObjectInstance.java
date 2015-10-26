@@ -17,7 +17,7 @@ public class Test5EditObjectInstance extends BaseTest {
     public void createObject(){
         LoginPage.authorizeAsAdmin();
         MainPage.goToEditObjectInstancePage(/*name*/"AUTOTEST1632");
-        EditObjectInstancePage.checkTitleIsDisplayed();
+        EditObjectInstancePage.checkTitleIsDisplayed(/*name*/"AUTOTEST1632");
         EditObjectInstancePage.clickButtonEditObject();
         CreateObjectInstancePage.inputField(Integer, "999");
         CreateObjectInstancePage.inputField(String, "autotester");

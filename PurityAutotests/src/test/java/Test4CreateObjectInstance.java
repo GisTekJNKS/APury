@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Selenide.open;
  */
 public class Test4CreateObjectInstance extends BaseTest {
 
-    @Test
+
     public void createObject(){
         LoginPage.authorizeAsAdmin();
         MainPage.goToCreateObjectInstancePage(/*name*/"AUTOTEST1632");

@@ -14,11 +14,11 @@ import static com.codeborne.selenide.Selenide.open;
  */
 public class Test7DeleteObject extends BaseTest {
 
-    @Test
+
     public void createObject() {
         LoginPage.authorizeAsAdmin();
         MainPage.goToEditObjectInstancePage(/*name*/"AUTOTEST1632");
-        EditObjectInstancePage.checkTitleIsDisplayed();
+        EditObjectInstancePage.checkTitleIsDisplayed(/*name*/"AUTOTEST1632");
         EditObjectInstancePage.clickButtonDelete();
     }
 

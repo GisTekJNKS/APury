@@ -65,7 +65,7 @@ public class ObjectEditorPage extends BasePage{
 
     public static void clickButtonCreateNew (){
         $(CREATE_NEW_BUTTON).click();
-        $(TITLE).shouldBe(visible).shouldHave(text("Create entity"));
+        $(TITLE).shouldBe(visible).shouldHave(text("Create object type"));
     }
 
     public static void inputName(String name){
@@ -132,7 +132,7 @@ public class ObjectEditorPage extends BasePage{
 
     public static void clickButtonCreate(){
         $(CREATE_BUTTON).click();
-        if ($(By.xpath("//h2[contains(text(),'Create entity')]")).exists()) {
+        if ($(By.xpath("//h2[contains(text(),'Create object type')]")).exists()) {
             clickButtonCreate();
         }
         assertTrue($("#w0").waitUntil(visible, 20000).getText().contains("Well done! You successfully created entity"));

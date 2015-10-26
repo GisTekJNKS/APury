@@ -8,7 +8,9 @@ import org.testng.annotations.*;
 
 import java.util.Random;
 
+import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
 
 /**
@@ -49,7 +51,8 @@ public class BaseTest {
 
     @AfterMethod
     public static void tearDown(){
-        closeWebDriver();
+        clearBrowserCache();
+        close();
     }
 
 }
