@@ -131,7 +131,7 @@ public class Test3CRUDObject extends BaseTest {
     public void removeObjectInstanceFull() {
         LoginPage.authorizeAsAdmin();
         MainPage.goToObjectEditor();
-        ObjectEditorPage.clickDeleteObject("AUTOTEST1632");
+        ObjectEditorPage.clickDeleteObject(name);
     }
 
 }
