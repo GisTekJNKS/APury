@@ -75,12 +75,13 @@ public class ObjectEditorPage extends BasePage{
         $(MACHINE_NAME).sendKeys(machineName);
     }
 
-    public static void clickButtonAddObjectFields() throws InterruptedException {
-        actions().moveToElement($(ADD_OBJECT_FIELD_BUTTON).shouldBe(visible)).click().build().perform();
-        if ($(FIELD_NAME).is(not(visible)))
-        {
-            clickButtonAddObjectFields();
-        }
+    public static void clickButtonAddObjectFields() {
+        actions().moveToElement($(ADD_OBJECT_FIELD_BUTTON).shouldBe(visible)).build().perform();
+        $(By.cssSelector("span[aria-describedby^='tooltip']")).waitUntil(exist,5000).click();
+//        if ($(FIELD_NAME).is(not(visible)))
+//        {
+//            clickButtonAddObjectFields();
+//        }
         $(FIELD_NAME).waitUntil(exist, 5000);
     }
 
