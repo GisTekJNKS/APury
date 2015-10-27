@@ -87,9 +87,11 @@ public class ObjectEditorPage extends BasePage{
 
     public static void inputFieldName(String fieldName) {
         $(FIELD_NAME).waitUntil(exist,5000).click();
+        $(FIELD_NAME).click();
+        $(FIELD_NAME).clear();
         $(FIELD_NAME).sendKeys(fieldName);
         $("#pjax-widget").click();
-        if($(By.xpath("//div[text()='Name cannot be blank.']")).isDisplayed()){
+        if($(By.cssSelector(".help-block.help-block-error")).is(visible)){
             inputFieldName(fieldName);
         }
     }
@@ -120,7 +122,6 @@ public class ObjectEditorPage extends BasePage{
     }
 
     public static void clickButtonAdd(){
-        $(".form-group.field-fieldsform-caption.required.has-success").waitUntil(exist, 5000);
         $(ADD_BUTTON).click();
         Waiter.waitForJquery(10000);
     }
