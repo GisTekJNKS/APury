@@ -69,7 +69,8 @@ public class CreateObjectInstancePage extends BasePage {
             case DateTime:
                 $(By.cssSelector("input[placeholder='Choose DateTime']")).click();
                 $(By.xpath("//td[text()='" + value.substring(0, value.indexOf(' ')) + "']")).click();
-                $(By.xpath("//span[text()='"+value.substring(value.indexOf(' ')+1)+"']")).waitUntil(visible,5000).click();
+                $$(By.xpath("//span[text()='"+value.substring(value.indexOf(' ')+1)+"']")).get(1).waitUntil(visible, 5000).click();
+                $$(By.xpath("//span[text()='"+value.substring(value.indexOf(' ')+1)+"']")).get(0).waitUntil(visible, 5000).click();
                 break;
             case Price:
                 $(By.cssSelector("input[placeholder='Enter Price']")).clear();
