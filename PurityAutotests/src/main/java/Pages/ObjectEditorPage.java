@@ -30,13 +30,15 @@ public class ObjectEditorPage extends BasePage{
     private static final By CANCEL_BUTTON= By.cssSelector(".btn.btn-default.cansel-btn");
     private static final By CREATE_BUTTON= By.id("submit-object-form");
     private static final By DELETE_BUTTON=By.cssSelector(".btn.btn-danger");
-//    private static final By =By.("");
-//    private static final By =By.("");
-//    private static final By =By.("");
-//    private static final By =By.("");
-//    private static final By =By.("");
-//    private static final By =By.("");
-//    private static final By =By.("");
+    private static final By ERROR_MESSAGE_NAME_CANNOT_BE_BLANK = By.xpath("//li[text()='Name cannot be blank.']");
+    private static final By ERROR_MESSAGE_MACHINE_NAME_CANNOT_BE_BLANK = By.xpath("//li[text()='Machine Name cannot be blank.']");
+
+
+    public enum ErrorMessage{
+        NameCannotBeBlank,
+        MachineNameCannotBeBlank,
+
+    }
 
     public enum Type{
         Choose,
@@ -75,10 +77,10 @@ public class ObjectEditorPage extends BasePage{
         $(MACHINE_NAME).sendKeys(machineName);
     }
 
-    public static void clickButtonAddObjectFields() {
+    public static void clickButtonAddObjectFields() throws InterruptedException {
         actions().moveToElement($(ADD_OBJECT_FIELD_BUTTON).shouldBe(visible)).build().perform();
-        $(By.cssSelector("span[aria-describedby^='tooltip']")).waitUntil(exist,5000).click();
-        $(FIELD_NAME).waitUntil(exist, 5000);
+        $(By.cssSelector("span[aria-describedby^='tooltip']")).waitUntil(exist, 5000).click();
+        Thread.sleep(1500);
     }
 
     public static void inputFieldName(String fieldName) {
@@ -128,12 +130,16 @@ public class ObjectEditorPage extends BasePage{
     }
 
     public static void clickButtonCreate(){
-        $(CREATE_BUTTON).click();
-        if ($(By.xpath("//h2[contains(text(),'Create object type')]")).exists()) {
-            clickButtonCreate();
-        }
-        assertTrue($("#w0").waitUntil(visible, 20000).getText().contains("Well done! You successfully created entity"));
+        $(CREATE_BUTTON).waitUntil(visible,6000).click();
+//        if ($(By.xpath("//h2[contains(text(),'Create object type')]")).exists()) {
+//            clickButtonCreate();
+//        }
     }
+
+    public  static void checkaddedObject(){
+
+    }
+
 
     public static void clickButtonDelete(){
         $(DELETE_BUTTON).click();
@@ -172,6 +178,13 @@ public class ObjectEditorPage extends BasePage{
         return Integer.parseInt(null);
     }
 
-
+    public static void checkErrorMessage(ErrorMessage message){
+        switch (message){
+            case NameCannotBeBlank:$(ERROR_MESSAGE_NAME_CANNOT_BE_BLANK).waitUntil(visible, 5000);
+                break;
+            case MachineNameCannotBeBlank:$(ERROR_MESSAGE_MACHINE_NAME_CANNOT_BE_BLANK).waitUntil(visible, 5000);
+                break;
+        }
+    }
 
 }

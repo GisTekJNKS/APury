@@ -1,7 +1,4 @@
 D:\AUTOTESTS\WorkDirectory\AutoPury\PurityAutotests\src\test\java\Test2FailAuthorization.java
-D:\AUTOTESTS\WorkDirectory\AutoPury\PurityAutotests\src\test\java\Test3CreateObject.java
-D:\AUTOTESTS\WorkDirectory\AutoPury\PurityAutotests\src\test\java\Test5EditObjectInstance.java
 D:\AUTOTESTS\WorkDirectory\AutoPury\PurityAutotests\src\test\java\Test1SuccessfulAuthorization.java
-D:\AUTOTESTS\WorkDirectory\AutoPury\PurityAutotests\src\test\java\Test6EditObjectInsertWrongData.java
-D:\AUTOTESTS\WorkDirectory\AutoPury\PurityAutotests\src\test\java\Test4CreateObjectInstance.java
-D:\AUTOTESTS\WorkDirectory\AutoPury\PurityAutotests\src\test\java\Test7DeleteObject.java
+D:\AUTOTESTS\WorkDirectory\AutoPury\PurityAutotests\src\test\java\Test4CreateObjectWrongData.java
+D:\AUTOTESTS\WorkDirectory\AutoPury\PurityAutotests\src\test\java\Test3CRUDObject.java

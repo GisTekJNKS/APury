@@ -54,7 +54,7 @@ public class EditObjectInstancePage extends BasePage {
         $(DELETE_BUTTON).click();
         org.openqa.selenium.Alert alert = getWebDriver().switchTo().alert();
         alert.accept();
-        assertTrue($(MESSAGE_AFTER_ACTION).waitUntil(visible, 10000).getText().contains("Well done! You successfully deleted Object of entity"));
+        assertTrue($(MESSAGE_AFTER_ACTION).waitUntil(visible, 15000).getText().contains("Well done! You successfully deleted Object of entity"));
     }
 
 

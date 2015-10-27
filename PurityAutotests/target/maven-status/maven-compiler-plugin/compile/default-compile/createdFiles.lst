@@ -11,6 +11,7 @@ Pages\EditObjectInstancePage$1.class
 Base\BasePage.class
 Pages\LoginPage$1.class
 Pages\CreateObjectInstancePage.class
+Pages\ObjectEditorPage$ErrorMessage.class
 Pages\ObjectEditorPage.class
 Pages\ObjectEditorPage$Type.class
 Pages\EditObjectInstancePage.class
