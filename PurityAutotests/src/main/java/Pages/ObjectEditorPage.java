@@ -76,7 +76,7 @@ public class ObjectEditorPage extends BasePage{
     }
 
     public static void clickButtonAddObjectFields(){
-        $(ADD_OBJECT_FIELD_BUTTON).should(exist).click();
+        actions().moveToElement($(ADD_OBJECT_FIELD_BUTTON).shouldBe(visible)).click().build().perform();
         Waiter.waitForJquery(10000);
         if ($(FIELD_NAME).is(not(visible)))
         {
