@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de28ac78-8ebe-41a0-a9b7-a69ceee8b661" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Test3CRUDObject.java" afterPath="$PROJECT_DIR$/src/test/java/Test3CRUDObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Pages/ObjectEditorPage.java" afterPath="$PROJECT_DIR$/src/main/java/Pages/ObjectEditorPage.java" />
     </list>
     <ignored path="PurityAutotests.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,18 +47,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test6EditObjectInsertWrongData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Test6EditObjectInsertWrongData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Test4CreateObjectInstance.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Test4CreateObjectInstance.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,8 +60,8 @@
       <file leaf-file-name="ObjectEditorPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Pages/ObjectEditorPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.7586207">
-              <caret line="22" column="66" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="66" />
+            <state vertical-scroll-proportion="-4.9310346">
+              <caret line="125" column="25" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
               <folding>
                 <element signature="e#2567#2568#0" expanded="true" />
                 <element signature="e#2605#2606#0" expanded="true" />
@@ -84,11 +72,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="EditObjectInstancePage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Pages/EditObjectInstancePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="61" column="99" selection-start-line="61" selection-start-column="99" selection-end-line="61" selection-end-column="99" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Test3CRUDObject.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Test3CRUDObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.7142857">
-              <caret line="74" column="50" selection-start-line="74" selection-start-column="50" selection-end-line="74" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.42857143">
+              <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -161,10 +159,10 @@
         <option value="$PROJECT_DIR$/src/test/java/Test5EditObjectInstance.java" />
         <option value="$PROJECT_DIR$/src/test/java/Test4CreateObjectInstance.java" />
         <option value="$PROJECT_DIR$/src/main/java/Pages/MainPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Pages/ObjectEditorPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/Test2FailAuthorization.java" />
         <option value="$PROJECT_DIR$/src/main/java/Pages/CreateObjectInstancePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/Test3CRUDObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Pages/ObjectEditorPage.java" />
       </list>
     </option>
   </component>
@@ -370,7 +368,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
   </component>
-  <component name="RunManager" selected="TestNG.Test3CRUDObject.createObjectInstance">
+  <component name="RunManager" selected="TestNG.Test3CRUDObject.createObject">
     <configuration default="false" name="Test6EditObjectInsertWrongData.createObject" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="PurityAutotests" />
@@ -677,8 +675,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.Test3CRUDObject.createObjectInstance" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.Test3CRUDObject.createObject" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.Test3CRUDObject.createObject" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.Test3CRUDObject.createObjectInstance" />
         <item index="2" class="java.lang.String" itemvalue="TestNG.Test3CRUDObject.removeObjectInstanceFull" />
         <item index="3" class="java.lang.String" itemvalue="TestNG.Test4CreateObjectInstance.createObject" />
         <item index="4" class="java.lang.String" itemvalue="TestNG.Test6EditObjectInsertWrongData.createObject" />
@@ -768,13 +766,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Pages/ObjectEditorPage.java</url>
-          <line>160</line>
+          <line>161</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Pages/ObjectEditorPage.java</url>
-          <line>155</line>
+          <line>156</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
@@ -1100,14 +1098,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Pages/EditObjectInstancePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="99" selection-start-line="61" selection-start-column="99" selection-end-line="61" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Test1SuccessfulAuthorization.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1200,6 +1190,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Pages/EditObjectInstancePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="99" selection-start-line="61" selection-start-column="99" selection-end-line="61" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Pages/CreateObjectInstancePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1210,8 +1208,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Pages/ObjectEditorPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7586207">
-          <caret line="22" column="66" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="66" />
+        <state vertical-scroll-proportion="-4.9310346">
+          <caret line="125" column="25" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
           <folding>
             <element signature="e#2567#2568#0" expanded="true" />
             <element signature="e#2605#2606#0" expanded="true" />
@@ -1223,8 +1221,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Test3CRUDObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7142857">
-          <caret line="74" column="50" selection-start-line="74" selection-start-column="50" selection-end-line="74" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.42857143">
+          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
           <folding />
         </state>
       </provider>

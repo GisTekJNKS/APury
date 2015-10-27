@@ -75,7 +75,7 @@ public class ObjectEditorPage extends BasePage{
         $(MACHINE_NAME).sendKeys(machineName);
     }
 
-    public static void clickButtonAddObjectFields(){
+    public static void clickButtonAddObjectFields() throws InterruptedException {
         actions().moveToElement($(ADD_OBJECT_FIELD_BUTTON).shouldBe(visible)).click().build().perform();
         Waiter.waitForJquery(10000);
         if ($(FIELD_NAME).is(not(visible)))
@@ -121,8 +121,9 @@ public class ObjectEditorPage extends BasePage{
         }
     }
 
-    public static void clickButtonAdd(){
+    public static void clickButtonAdd() throws InterruptedException {
         $(ADD_BUTTON).click();
+        Thread.sleep(1500);
         Waiter.waitForJquery(10000);
     }
 
