@@ -127,7 +127,7 @@ public class Test3CRUDObject extends BaseTest {
         EditObjectInstancePage.clickButtonDelete();
     }
 
-    @Test
+
     public void removeObjectInstanceFull() {
         LoginPage.authorizeAsAdmin();
         MainPage.goToObjectEditor();
