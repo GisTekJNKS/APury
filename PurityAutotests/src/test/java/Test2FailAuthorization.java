@@ -20,6 +20,8 @@ public class Test2FailAuthorization extends BaseTest {
     @Test
     public static void authorizeWithEmptyFields(){
         LoginPage.showLoginForm();
+        LoginPage.inputLogin("");
+        LoginPage.inputLogin("");
         LoginPage.clickSignIn();
         LoginPage.checkErrorMessage(ErrorMessage.EmailCannotBeBlank);
         LoginPage.checkErrorMessage(ErrorMessage.PasswordCannotBeBlank);
