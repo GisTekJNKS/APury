@@ -127,11 +127,11 @@ public class Test3CRUDObject extends BaseTest {
         EditObjectInstancePage.clickButtonDelete();
     }
 
-
+    @Test
     public void removeObjectInstanceFull() {
         LoginPage.authorizeAsAdmin();
         MainPage.goToObjectEditor();
-        ObjectEditorPage.clickDeleteObject("AUTOTEST2461");
+        ObjectEditorPage.clickDeleteObject("AUTOTEST1632");
     }
 
 }

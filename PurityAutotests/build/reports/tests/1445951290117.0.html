@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US"><head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="_csrf" name="csrf-param" />
+    <meta content="U3ZPelFHVUMrM34bMxERAREAFgI8L206JiAHHTx2bCBlPHk9JXAYdA==" name="csrf-token" />
+    <title>List of Object types</title>
+    <link href="/files/uploads/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D1%8F%D0%B7%D1%8B%D0%BA.jpg" type="image/png" rel="icon" />
+    <link rel="stylesheet" href="/sass/scheme-blue.css" />
+<link rel="stylesheet" href="/assets/d37d2a36/css/bootstrap.css" />
+<link rel="stylesheet" href="/vendor/footables/footable.core.css" />
+<link rel="stylesheet" href="/vendor/Font-Awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/vendor/BootstrapCheckbox/awesome-bootstrap-checkbox.css" />
+<link rel="stylesheet" href="/sass/site.css" />
+<script src="/assets/86a3f74b/jquery.js"></script>
+<script src="/assets/d37d2a36/js/bootstrap.js"></script>
+<script src="/vendor/footables/footable.all.min.js"></script>
+<script src="/js/footables-init.js"></script>
+<script src="/vendor/rowsorter/jquery.rowsorter.js"></script>
+<script src="/js/settings/object-list.js"></script>    </head>
+<body>
+
+    <header>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+    <div class="navbar-header">
+        <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="/framework" class="navbar-brand">Skyportal</a>
+    </div>
+
+    <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+                                                <li><a href="/backup">Backup</a></li>
+                                    </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    My apps<span class="caret"></span></a>
+                <ul role="menu" class="dropdown-menu">
+                                                                        <li><a href="/backup">Backup</a></li>
+                                                            </ul>
+            </li>
+            <li class="dropdown">
+                <a aria-expanded="false" id="dropdownMenu1" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    Settings<span class="caret"></span></a>
+                <ul aria-labelledby="dropdownMenu2" class="dropdown-menu">
+                                                                                                                                    <li><a href="/settings/profile">My profile</a></li>
+                                                                                                                <li class="dropdown">
+                                    <a aria-expanded="false" id="dropdownMenu2" data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                        Create                                        <span class="caret"></span>
+                                    </a>
+                                    <ul aria-labelledby="dropdownMenu2" class="dropdown-menu dropdown-menu-left">
+                                                                                    <li><a href="/settings/create?entity=1">User</a></li>
+                                                                                    <li><a href="/settings/create?entity=38">AUTOTEST1632</a></li>
+                                                                                    <li><a href="/settings/create?entity=46">Country</a></li>
+                                                                                    <li><a href="/settings/create?entity=65">AUTOTEST9487</a></li>
+                                                                            </ul>
+                                </li>
+                                                                                                                                            <li class="dropdown">
+                                    <a aria-expanded="false" id="dropdownMenu2" data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                        Edit                                        <span class="caret"></span>
+                                    </a>
+                                    <ul aria-labelledby="dropdownMenu2" class="dropdown-menu dropdown-menu-left">
+                                                                                    <li><a href="/settings/edit?entity=1">User</a></li>
+                                                                                    <li><a href="/settings/edit?entity=38">AUTOTEST1632</a></li>
+                                                                                    <li><a href="/settings/edit?entity=46">Country</a></li>
+                                                                                    <li><a href="/settings/edit?entity=65">AUTOTEST9487</a></li>
+                                                                            </ul>
+                                </li>
+                                                                                                                                                                        <li><a href="/settings/object-list">Object editor</a></li>
+                                                                                                                                            <li><a href="/settings/permissions">Permissions</a></li>
+                                                                                                                                            <li><a href="/settings/promoted-apps">Promoted apps</a></li>
+                                                                                                                                            <li><a href="/settings/info-popup">Informational popup</a></li>
+                                                                                                                                            <li><a href="/settings/info-content">Informational content</a></li>
+                                                                                                                                            <li><a href="/settings/change-log">Changes log</a></li>
+                                                                                                                                            <li><a href="/settings/global-settings">Global settings</a></li>
+                                                                                                                                            <li><a href="/site/logout">Log out</a></li>
+                                                                                        </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    </nav>
+    <div class="heading">
+        <h1>Settings for System administrator</h1>
+        <h2>List of Object types</h2>
+        <hr />
+    </div>
+</header>
+<div class="wrapper">
+    <div class="content">
+                <div class="table-wrap table-center permissions-block">
+            <input type="text" placeholder="Enter a search string" class="permissions-filter form-control" />
+            <a href="/settings/object-list/create" class="btn btn-primary add-role-btn">
+                Create new            </a>
+            <div style="clear: both;"></div>
+            <table class="table table-bordered no-paging footable-loaded footable" data-filter=".permissions-filter">
+                <thead>
+                    <tr>
+                        <th class="footable-sortable">#<span class="footable-sort-indicator"></span></th>
+                        <th class="footable-sortable">Object<span class="footable-sort-indicator"></span></th>
+                        <th class="footable-sortable">Machine Name<span class="footable-sort-indicator"></span></th>
+                        <th data-sort-ignore="true">Enable underlying objects</th>
+                        <th data-sort-ignore="true">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                                            <tr style="display: table-row;" class="footable-even">
+                            <td><span class="footable-toggle"></span>1</td>
+                            <td>User</td>
+                            <td style="width: 150px;">user</td>
+                            <td>
+                                <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" data-id="1" data-href="/settings/object-list/include-in-general-tree" class="include_in_tree" />
+                                    <label></label>
+                                </div>
+                            </td>
+                            <td>
+                                <a style="float: left; margin-left: 15px;" href="/settings/object-list/update?id=1" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span> Edit </a>
+                                                    </td>
+                        </tr>
+                                            <tr style="display: table-row;" class="footable-odd">
+                            <td><span class="footable-toggle"></span>2</td>
+                            <td>AUTOTEST1632</td>
+                            <td style="width: 150px;">MNAUTOTEST1632</td>
+                            <td>
+                                <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" checked="checked" data-id="38" data-href="/settings/object-list/include-in-general-tree" class="include_in_tree" />
+                                    <label></label>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="/settings/object-list/update?id=38" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span> Edit </a>
+                                                        <a href="/settings/object-list/delete?id=38" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a>
+                                                    </td>
+                        </tr>
+                                            <tr style="display: table-row;" class="footable-even">
+                            <td><span class="footable-toggle"></span>3</td>
+                            <td>Country</td>
+                            <td style="width: 150px;">country</td>
+                            <td>
+                                <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" checked="checked" data-id="46" data-href="/settings/object-list/include-in-general-tree" class="include_in_tree" />
+                                    <label></label>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="/settings/object-list/update?id=46" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span> Edit </a>
+                                                        <a href="/settings/object-list/delete?id=46" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a>
+                                                    </td>
+                        </tr>
+                                            <tr style="display: table-row;" class="footable-odd">
+                            <td><span class="footable-toggle"></span>4</td>
+                            <td>AUTOTEST9487</td>
+                            <td style="width: 150px;">MNAUTOTEST9487</td>
+                            <td>
+                                <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" checked="checked" data-id="65" data-href="/settings/object-list/include-in-general-tree" class="include_in_tree" />
+                                    <label></label>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="/settings/object-list/update?id=65" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span> Edit </a>
+                                                        <a href="/settings/object-list/delete?id=65" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a>
+                                                    </td>
+                        </tr>
+                                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="footer">© Purity IT AS 2015</div>
+
+
+
+</body></html>

@@ -78,10 +78,6 @@ public class ObjectEditorPage extends BasePage{
     public static void clickButtonAddObjectFields() {
         actions().moveToElement($(ADD_OBJECT_FIELD_BUTTON).shouldBe(visible)).build().perform();
         $(By.cssSelector("span[aria-describedby^='tooltip']")).waitUntil(exist,5000).click();
-//        if ($(FIELD_NAME).is(not(visible)))
-//        {
-//            clickButtonAddObjectFields();
-//        }
         $(FIELD_NAME).waitUntil(exist, 5000);
     }
 
@@ -153,16 +149,25 @@ public class ObjectEditorPage extends BasePage{
     }
 
     public static void clickDeleteObject (String name){
-        SelenideElement element = $$(By.tagName("tr")).get(getNumberOfRowg(name));
+        SelenideElement element = $$(By.tagName("tr")).get(getNumberOfRows(name)+1);
         element.$(".glyphicon.glyphicon-remove").click();
         assertTrue($("#w0").waitUntil(visible, 6000).getText().contains("Well done! You successfully deleted entity - " + name + ""));
     }
 
-    private static int getNumberOfRowg(String name){
-        ElementsCollection rows = $$(By.tagName("tr"));
+    private static int getNumberOfRows(String name){
+        SelenideElement element = $("tbody");
+        ElementsCollection rows = element.$$(By.tagName("tr"));
+        int temp = rows.size();
         for (int i=0;i<rows.size();i++){
-            rows.get(i).$(By.xpath("//td[contains(text(),'" + name + "')]")).should(exist);
-            return i;
+            String sh = rows.get(i).getText();
+            ElementsCollection cols = rows.get(i).$$("td");
+            int temp2 = cols.size();
+            for (SelenideElement s:cols) {
+                String ss = s.getText();
+                if (ss.contentEquals(name)) {
+                    return i;
+                }
+            }
         }
         return Integer.parseInt(null);
     }
