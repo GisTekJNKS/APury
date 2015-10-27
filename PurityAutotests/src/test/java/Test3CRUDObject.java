@@ -72,7 +72,7 @@ public class Test3CRUDObject extends BaseTest {
     @Test
     public void createObjectInstance(){
         LoginPage.authorizeAsAdmin();
-        MainPage.goToCreateObjectInstancePage(/*name*/"AUTOTEST1632");
+        MainPage.goToCreateObjectInstancePage(name);
         CreateObjectInstancePage.checkTitleIsDisplayed();
         CreateObjectInstancePage.chooseRoot();
         CreateObjectInstancePage.inputField(Integer, "1000");
