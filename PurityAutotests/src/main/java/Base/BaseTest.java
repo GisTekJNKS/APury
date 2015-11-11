@@ -20,6 +20,7 @@ public class BaseTest {
 
     public static String BASE_URL="http://purityIT:HardPassword@purity_ws.andersenlab.com";
     public static String name = "AUTOTEST";
+    public static String countryInstanceName = "Test_country_";
     public static String machineName = "MNAUTOTEST";
     public static final String INTEGER = "Integer";
     public static final String STRING = "String";
@@ -35,6 +36,7 @@ public class BaseTest {
         int r = (new Random()).nextInt(9999);
         name += r;
         machineName += r;
+        countryInstanceName += r;
     }
 
     @BeforeMethod

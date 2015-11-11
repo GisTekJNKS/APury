@@ -68,5 +68,13 @@ public class LoginPage extends BasePage {
         MainPage.dashboardIsDisplayed();
     }
 
+    public static void authorizeAsCountryAdmin(){
+        LoginPage.showLoginForm();
+        LoginPage.inputLogin("country_test_admin@gmail.com");
+        LoginPage.inputPassword("country");
+        LoginPage.clickSignIn();
+        MainPage.dashboardIsDisplayed();
+    }
+
 
 }

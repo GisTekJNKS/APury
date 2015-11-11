@@ -80,7 +80,7 @@ public class ObjectEditorPage extends BasePage{
     public static void clickButtonAddObjectFields() throws InterruptedException {
         actions().moveToElement($(ADD_OBJECT_FIELD_BUTTON).shouldBe(visible)).build().perform();
         $(By.cssSelector("span[aria-describedby^='tooltip']")).waitUntil(exist, 5000).click();
-        Thread.sleep(1500);
+        Thread.sleep(1000);
     }
 
     public static void inputFieldName(String fieldName) {
@@ -121,8 +121,7 @@ public class ObjectEditorPage extends BasePage{
 
     public static void clickButtonAdd() throws InterruptedException {
         $(ADD_BUTTON).click();
-        Thread.sleep(1500);
-        Waiter.waitForJquery(10000);
+        Thread.sleep(1000);
     }
 
     public static void clickButtonCancel(){
@@ -155,12 +154,13 @@ public class ObjectEditorPage extends BasePage{
     }
 
     public static void clickDeleteObject (String name){
-        SelenideElement element = $$(By.tagName("tr")).get(getNumberOfRows(name)+1);
+        SelenideElement table = $("tbody");
+        SelenideElement element = table.$$(By.tagName("tr")).get(getNumberOfRow(name));
         element.$(".glyphicon.glyphicon-remove").click();
         assertTrue($("#w0").waitUntil(visible, 6000).getText().contains("Well done! You successfully deleted entity - " + name + ""));
     }
 
-    private static int getNumberOfRows(String name){
+    private static int getNumberOfRow(String name){
         SelenideElement element = $("tbody");
         ElementsCollection rows = element.$$(By.tagName("tr"));
         int temp = rows.size();

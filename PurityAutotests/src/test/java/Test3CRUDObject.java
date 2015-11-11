@@ -90,7 +90,7 @@ public class Test3CRUDObject extends BaseTest {
     public void editObjectInstance(){
         LoginPage.authorizeAsAdmin();
         MainPage.goToEditObjectInstancePage(name);
-        EditObjectInstancePage.checkTitleIsDisplayed(name);
+        EditObjectInstancePage.checkTitleIsListOfObjects(name);
         EditObjectInstancePage.clickButtonEditObject();
         CreateObjectInstancePage.inputField(Integer, "999");
         CreateObjectInstancePage.inputField(String, "autotester");
@@ -107,7 +107,7 @@ public class Test3CRUDObject extends BaseTest {
     public void editObjectInstanceWrongData(){
         LoginPage.authorizeAsAdmin();
         MainPage.goToEditObjectInstancePage(name);
-        EditObjectInstancePage.checkTitleIsDisplayed(name);
+        EditObjectInstancePage.checkTitleIsListOfObjects(name);
         EditObjectInstancePage.clickButtonEditObject();
         CreateObjectInstancePage.inputField(Integer, "1001");
         CreateObjectInstancePage.inputField(String, "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890777");
@@ -123,7 +123,7 @@ public class Test3CRUDObject extends BaseTest {
     public void removeObjectInstance() {
         LoginPage.authorizeAsAdmin();
         MainPage.goToEditObjectInstancePage(name);
-        EditObjectInstancePage.checkTitleIsDisplayed(name);
+        EditObjectInstancePage.checkTitleIsListOfObjects(name);
         EditObjectInstancePage.clickButtonDelete();
     }
 

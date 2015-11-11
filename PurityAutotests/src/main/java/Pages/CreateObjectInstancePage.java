@@ -4,9 +4,7 @@ import Base.BasePage;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
-import static com.codeborne.selenide.Condition.not;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static org.testng.Assert.*;
@@ -84,13 +82,31 @@ public class CreateObjectInstancePage extends BasePage {
 //        $(TITLE).click();
     }
 
+    public static void inputField(String fieldName,String value){
+        $(By.cssSelector("input[placeholder$='"+fieldName.toLowerCase()+"']")).clear();
+        $(By.cssSelector("input[placeholder$='"+fieldName.toLowerCase()+"']")).sendKeys(value);
+    }
+
     public static void clickButtonCreate (){
         $(CREATE_BUTTON).click();
         assertTrue($("#w0").waitUntil(visible, 5000).getText().contains("Well done! You successfully created Object of entity"));
     }
 
+    public static void checkInstanceWasAdded(){
+        assertTrue($("#w0").waitUntil(visible, 5000).getText().contains("Well done! You successfully created Object of entity"));
+    }
+
     public static void checkTitleIsDisplayed(){
         assertTrue($(TITLE).waitUntil(visible, 5000).getText().startsWith("Create new"));
+    }
+
+    public static void checkValueInFieldIs(String value){
+        $(By.cssSelector("input[value='"+value+"']")).shouldBe(exist).shouldBe(visible);
+    }
+
+    public static void checkRoleIs(String role){
+        $(By.cssSelector("option[selected='']")).shouldBe(exist).shouldBe(visible);
+        assertEquals(role,$(By.cssSelector("option[selected='']")).getText());
     }
 
 }

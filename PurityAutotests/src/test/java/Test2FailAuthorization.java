@@ -41,6 +41,7 @@ public class Test2FailAuthorization extends BaseTest {
         LoginPage.showLoginForm();
         LoginPage.inputLogin("admin@@gmail.com");
         LoginPage.inputPassword("sdg");
+        LoginPage.clickSignIn();
         LoginPage.checkErrorMessage(ErrorMessage.EmailIsNotAValidEmailAddress);
     }
 

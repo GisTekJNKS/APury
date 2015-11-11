@@ -43,7 +43,7 @@ public class MainPage extends BasePage {
     public static void goToEditObjectInstancePage(String name){
         $(SETTINGS).click();
         $(OBJECT_INSTANCE_EDIT).click();
-        $$(By.xpath("//a[text()='"+name+"']")).get(1).click();
+        $$(By.xpath("//a[text()='"+name+"']")).exclude(not(visible)).get(0).click();
     }
 
 }
