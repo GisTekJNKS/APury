@@ -19,13 +19,12 @@ public class MainPage extends BasePage {
     private static final By DASHBOARD_TITLE = By.cssSelector(".dashboard");
     private static final By SETTINGS = By.id("dropdownMenu1");
     private static final By OBJECT_EDITOR = By.xpath("//a[text()='Object editor']");
-    private static final By OBJECT_INSTANCE_CREATE = By.xpath("//a[contains(text(),'Create')]");
-    private static final By OBJECT_INSTANCE_EDIT = By.xpath("//a[contains(text(),'Edit')]");
+    private static final By OBJECT_INSTANCE = By.xpath("//a[contains(text(),'Objects')]");
 
 
 
     public static void dashboardIsDisplayed(){
-        $(DASHBOARD_TITLE).waitUntil(visible,10000);
+        $(DASHBOARD_TITLE).waitUntil(visible, 10000);
     }
 
     public static void goToObjectEditor(){
@@ -34,16 +33,10 @@ public class MainPage extends BasePage {
         ObjectEditorPage.checkTitleisDisplayed();
     }
 
-    public static void goToCreateObjectInstancePage(String name){
+    public static void goToObjectInstancePage(String name){
         $(SETTINGS).click();
-        $(OBJECT_INSTANCE_CREATE).click();
-        $(By.xpath("//a[text()='"+name+"']")).click();
-    }
-
-    public static void goToEditObjectInstancePage(String name){
-        $(SETTINGS).click();
-        $(OBJECT_INSTANCE_EDIT).click();
-        $$(By.xpath("//a[text()='"+name+"']")).exclude(not(visible)).get(0).click();
+        $(OBJECT_INSTANCE).click();
+        $(By.xpath("//a[text()='" + name + "']")).click();
     }
 
 }

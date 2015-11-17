@@ -1,11 +1,10 @@
 import Base.BaseTest;
 import Helpers.ScreenFailureTest;
 import Pages.*;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import java.util.Random;
+import javax.management.ObjectInstance;
 
 import static Pages.ObjectEditorPage.Type.*;
 import static com.codeborne.selenide.Selenide.$;
@@ -72,8 +71,9 @@ public class Test3CRUDObject extends BaseTest {
     @Test
     public void createObjectInstance(){
         LoginPage.authorizeAsAdmin();
-        MainPage.goToCreateObjectInstancePage(name);
-        CreateObjectInstancePage.checkTitleIsDisplayed();
+        MainPage.goToObjectInstancePage(name);
+        ObjectInstancePage.checkTitleIsListOfObjects(name);
+        ObjectInstancePage.clickButtonCreateNew();
         CreateObjectInstancePage.chooseRoot();
         CreateObjectInstancePage.inputField(Integer, "1000");
         CreateObjectInstancePage.inputField(String, "autotest");
@@ -89,9 +89,9 @@ public class Test3CRUDObject extends BaseTest {
     @Test
     public void editObjectInstance(){
         LoginPage.authorizeAsAdmin();
-        MainPage.goToEditObjectInstancePage(name);
-        EditObjectInstancePage.checkTitleIsListOfObjects(name);
-        EditObjectInstancePage.clickButtonEditObject();
+        MainPage.goToObjectInstancePage(name);
+        ObjectInstancePage.checkTitleIsListOfObjects(name);
+        ObjectInstancePage.clickButtonEditObject();
         CreateObjectInstancePage.inputField(Integer, "999");
         CreateObjectInstancePage.inputField(String, "autotester");
         CreateObjectInstancePage.inputField(Boolean, "");
@@ -100,31 +100,31 @@ public class Test3CRUDObject extends BaseTest {
         CreateObjectInstancePage.inputField(Date, "23");
         CreateObjectInstancePage.inputField(DateTime, "23 10:00");
         CreateObjectInstancePage.inputField(Price,"999");
-        EditObjectInstancePage.clickButtonEdit();
-        EditObjectInstancePage.checkSuccessfulUpdete();
+        ObjectInstancePage.clickButtonEdit();
+        ObjectInstancePage.checkSuccessfulUpdete();
     }
     @Test
     public void editObjectInstanceWrongData(){
         LoginPage.authorizeAsAdmin();
-        MainPage.goToEditObjectInstancePage(name);
-        EditObjectInstancePage.checkTitleIsListOfObjects(name);
-        EditObjectInstancePage.clickButtonEditObject();
+        MainPage.goToObjectInstancePage(name);
+        ObjectInstancePage.checkTitleIsListOfObjects(name);
+        ObjectInstancePage.clickButtonEditObject();
         CreateObjectInstancePage.inputField(Integer, "1001");
         CreateObjectInstancePage.inputField(String, "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890777");
         CreateObjectInstancePage.inputField(Email, "Autotester");
         CreateObjectInstancePage.inputField(Price,"-1");
-        EditObjectInstancePage.clickButtonEdit();
-        EditObjectInstancePage.checkErrorMessage(EditObjectInstancePage.ErrorMessageEditObjPage.WrongIntegerData, INTEGER);
-        EditObjectInstancePage.checkErrorMessage(EditObjectInstancePage.ErrorMessageEditObjPage.WrongStringData, STRING);
-        EditObjectInstancePage.checkErrorMessage(EditObjectInstancePage.ErrorMessageEditObjPage.WrongEmail, EMAIL);
+        ObjectInstancePage.clickButtonEdit();
+        ObjectInstancePage.checkErrorMessage(ObjectInstancePage.ErrorMessageEditObjPage.WrongIntegerData, INTEGER);
+        ObjectInstancePage.checkErrorMessage(ObjectInstancePage.ErrorMessageEditObjPage.WrongStringData, STRING);
+        ObjectInstancePage.checkErrorMessage(ObjectInstancePage.ErrorMessageEditObjPage.WrongEmail, EMAIL);
     }
 
     @Test
     public void removeObjectInstance() {
         LoginPage.authorizeAsAdmin();
-        MainPage.goToEditObjectInstancePage(name);
-        EditObjectInstancePage.checkTitleIsListOfObjects(name);
-        EditObjectInstancePage.clickButtonDelete();
+        MainPage.goToObjectInstancePage(name);
+        ObjectInstancePage.checkTitleIsListOfObjects(name);
+        ObjectInstancePage.clickButtonDelete();
     }
 
     @Test

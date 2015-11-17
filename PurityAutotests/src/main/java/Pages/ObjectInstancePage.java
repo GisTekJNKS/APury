@@ -14,7 +14,7 @@ import static org.testng.Assert.assertTrue;
 /**
  * Created by Dmitry Makhankov on 19.10.2015.
  */
-public class EditObjectInstancePage extends BasePage {
+public class ObjectInstancePage extends BasePage {
 
 
     private static final By EDIT_OBJECT_BUTTON = By.cssSelector(".btn.btn-primary.btn-xs");
@@ -23,6 +23,7 @@ public class EditObjectInstancePage extends BasePage {
     private static final By TITLE_LIST = By.xpath("//h2[contains(text(),'List of objects')]");
     private static final By TITLE_EDIT = By.xpath("//h2[contains(text(),'Edit object')]");
     private static final By MESSAGE_AFTER_ACTION = By.id("w0");
+    private static final By CREATE_NEW_BUTTON = By.xpath("//a[contains(text(),'Create new')]");
 
 
     public enum ErrorMessageEditObjPage{
@@ -90,5 +91,8 @@ public class EditObjectInstancePage extends BasePage {
         $(DELETE_BUTTON).shouldBe(visible);
     }
 
+    public static void clickButtonCreateNew (){
+        $(CREATE_NEW_BUTTON).click();
+    }
 
 }

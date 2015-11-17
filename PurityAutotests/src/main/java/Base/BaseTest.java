@@ -50,7 +50,6 @@ public class BaseTest {
     }
 
 
-
     @AfterMethod
     public static void tearDown(){
         clearBrowserCache();

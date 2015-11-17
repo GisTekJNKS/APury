@@ -21,6 +21,7 @@ public class CreateObjectInstancePage extends BasePage {
 
 
 
+
 //    private static final By STRING_FIELD = By.id("object-string");
 //    private static final By BOOLEAN_FIELD = By.id("object-string");
 //    private static final By PASSWORD_FIELD = By.id("object-string");
@@ -108,5 +109,7 @@ public class CreateObjectInstancePage extends BasePage {
         $(By.cssSelector("option[selected='']")).shouldBe(exist).shouldBe(visible);
         assertEquals(role,$(By.cssSelector("option[selected='']")).getText());
     }
+
+
 
 }
