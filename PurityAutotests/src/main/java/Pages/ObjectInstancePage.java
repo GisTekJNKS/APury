@@ -5,10 +5,12 @@ import Helpers.Waiter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Wait;
 
+import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 /**
@@ -34,12 +36,10 @@ public class ObjectInstancePage extends BasePage {
 
     public static void clickButtonEditObject(){
         $(EDIT_OBJECT_BUTTON).waitUntil(visible,5000).click();
-
     }
 
     public static void clickButtonEdit(){
         $(EDIT_BUTTON).waitUntil(visible,5000).click();
-        Waiter.waitForJquery(10000);
     }
 
     public static void checkSuccessfulUpdete(){
@@ -94,5 +94,21 @@ public class ObjectInstancePage extends BasePage {
     public static void clickButtonCreateNew (){
         $(CREATE_NEW_BUTTON).click();
     }
+
+    public static void checkCreateNewIsAvailable(boolean condition){
+        assertEquals($(CREATE_NEW_BUTTON).isDisplayed(),condition);
+
+    }
+
+    public static void checkEditIsAvailable(boolean condition){
+        assertEquals($(EDIT_OBJECT_BUTTON).isDisplayed(),condition);
+
+    }
+
+    public static void checkDeleteIsAvailable(boolean condition){
+        assertEquals($(DELETE_BUTTON).isDisplayed(),condition);
+
+    }
+
 
 }

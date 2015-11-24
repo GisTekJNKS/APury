@@ -1,14 +1,9 @@
 package Pages;
 
 import Base.BasePage;
-import Helpers.Waiter;
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
-import org.testng.Assert;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
@@ -19,7 +14,8 @@ import static org.testng.Assert.*;
  * Created by Dmitry Makhankov on 17.10.2015.
  */
 public class ObjectEditorPage extends BasePage{
-    private static final By TITLE = By.tagName("h2");
+    private static final By TITLE_LIST_OF_TYPES = By.xpath("//h2[contains(text(),'List of Object types')]");
+    private static final By TITLE_CREATE_OBJECT_TYPE = By.xpath("//h2[contains(text(),'Create object type')]");
     private static final By CREATE_NEW_BUTTON = By.cssSelector(".btn.btn-primary.add-role-btn");
     private static final By NAME = By.id("objectslistform-entity_name");
     private static final By MACHINE_NAME= By.id("objectslistform-machine_name");
@@ -61,12 +57,12 @@ public class ObjectEditorPage extends BasePage{
     }
 
     public static void checkTitleisDisplayed(){
-        $(TITLE).waitUntil(visible, 6000).shouldHave(text("List of Object types"));
+        $(TITLE_LIST_OF_TYPES).waitUntil(visible, 6000).shouldHave(text("List of Object types"));
     }
 
     public static void clickButtonCreateNew (){
         $(CREATE_NEW_BUTTON).click();
-        $(TITLE).shouldBe(visible).shouldHave(text("Create object type"));
+        $(TITLE_CREATE_OBJECT_TYPE).shouldBe(visible).shouldHave(text("Create object type"));
     }
 
     public static void inputName(String name){
@@ -158,24 +154,6 @@ public class ObjectEditorPage extends BasePage{
         SelenideElement element = table.$$(By.tagName("tr")).get(getNumberOfRow(name));
         element.$(".glyphicon.glyphicon-remove").click();
         assertTrue($("#w0").waitUntil(visible, 6000).getText().contains("Well done! You successfully deleted entity - " + name + ""));
-    }
-
-    private static int getNumberOfRow(String name){
-        SelenideElement element = $("tbody");
-        ElementsCollection rows = element.$$(By.tagName("tr"));
-        int temp = rows.size();
-        for (int i=0;i<rows.size();i++){
-            String sh = rows.get(i).getText();
-            ElementsCollection cols = rows.get(i).$$("td");
-            int temp2 = cols.size();
-            for (SelenideElement s:cols) {
-                String ss = s.getText();
-                if (ss.contentEquals(name)) {
-                    return i;
-                }
-            }
-        }
-        return Integer.parseInt(null);
     }
 
     public static void checkErrorMessage(ErrorMessage message){

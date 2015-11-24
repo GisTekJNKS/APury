@@ -16,7 +16,7 @@ public class CreateObjectInstancePage extends BasePage {
 
     private static final By CHOOSE_THE_PARENT = By.id("object-parent");
     private static final By ROOT = By.className("jstree-anchor");
-    private static final By TITLE = By.tagName("h2");
+    private static final By TITLE = By.xpath("//h2[contains(text(),'Create new')]");
     private static final By CREATE_BUTTON = By.xpath("//button[text()='Create']");
 
 
@@ -42,12 +42,12 @@ public class CreateObjectInstancePage extends BasePage {
             case Integer:
                 $(By.cssSelector("input[placeholder='Enter Integer']")).clear();
                 $(By.cssSelector("input[placeholder='Enter Integer']")).sendKeys(value);
-                $(TITLE).click();
+                $("h2").click();
                 break;
             case String:
                 $(By.cssSelector("input[placeholder='Enter String']")).clear();
                 $(By.cssSelector("input[placeholder='Enter String']")).sendKeys(value);
-                $(TITLE).click();
+                $("h2").click();
                 break;
             case Boolean:
                 $(By.cssSelector("input[type='checkbox']")).click();
@@ -55,12 +55,12 @@ public class CreateObjectInstancePage extends BasePage {
             case Password:
                 $(By.cssSelector("input[placeholder='Enter Password']")).clear();
                 $(By.cssSelector("input[placeholder='Enter Password']")).sendKeys(value);
-                $(TITLE).click();
+                $("h2").click();
                 break;
             case Email:
                 $(By.cssSelector("input[placeholder='Enter Email']")).clear();
                 $(By.cssSelector("input[placeholder='Enter Email']")).sendKeys(value);
-                $(TITLE).click();
+                $("h2").click();
                 break;
             case Date:
                 $(By.cssSelector("input[placeholder='Choose Date']")).click();
@@ -75,7 +75,7 @@ public class CreateObjectInstancePage extends BasePage {
             case Price:
                 $(By.cssSelector("input[placeholder='Enter Price']")).clear();
                 $(By.cssSelector("input[placeholder='Enter Price']")).sendKeys(value);
-                $(TITLE).click();
+                $("h2").click();
                 break;
         }
 //        $(By.id("object-" + fieldName.toLowerCase())).clear();
@@ -98,7 +98,7 @@ public class CreateObjectInstancePage extends BasePage {
     }
 
     public static void checkTitleIsDisplayed(){
-        assertTrue($(TITLE).waitUntil(visible, 5000).getText().startsWith("Create new"));
+        assertTrue($(TITLE).waitUntil(visible, 5000).getText().contains("Create new"));
     }
 
     public static void checkValueInFieldIs(String value){
